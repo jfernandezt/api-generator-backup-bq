@@ -1,5 +1,11 @@
-google-cloud-bigquery
-google-cloud-storage
-db_dtypes
-pandas
-datetime
+google-cloud-bigquery>=3.0.0
+google-cloud-storage>=2.0.0
+db_dtypes>=1.0.0
+pandas>=1.5.0
+flask>=2.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+gunicorn>=20.1.0
+# Opcional pero recomendado para aplicaciones con BigQuery
+pyarrow>=10.0.0
+requests>=2.25.0

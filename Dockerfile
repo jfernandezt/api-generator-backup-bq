@@ -7,4 +7,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD gunicorn --bind :$PORT app:app 
+# Asegurarte que gunicorn está en requirements.txt
+# Definir explícitamente PORT como variable de entorno
+ENV PORT=8080
+
+# Comando más explícito
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app 
