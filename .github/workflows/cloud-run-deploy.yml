@@ -38,9 +38,6 @@ jobs:
         
     - name: Ejecutar pruebas unitarias y de integración
       run: |
-        echo "Creando un test básico temporal..."
-        mkdir -p tests
-        echo 'def test_dummy(): assert True' > tests/test_temp.py
         pytest --cov=./ --cov-report=xml
         
     - name: Subir resultados de cobertura
