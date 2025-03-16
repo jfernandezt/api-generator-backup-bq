@@ -33,7 +33,7 @@ jobs:
         
     - name: Ejecutar pruebas unitarias y de integración
       run: |
-        pytest --cov=./ --cov-report=xml
+        pytest tests/ --cov=./ --cov-report=xml
         
     - name: Subir resultados de cobertura
       uses: actions/upload-artifact@v4
