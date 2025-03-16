@@ -98,7 +98,6 @@ jobs:
         image: ${{ env.IMAGE_NAME }}
         env_vars: |
           GCP_PROJECT_ID=${{ secrets.GCP_PROJECT_ID }}
-          API_KEY=${{ secrets.API_KEY }}
         
     - name: Verificar despliegue
       id: verify-deployment
