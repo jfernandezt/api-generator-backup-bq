@@ -98,7 +98,7 @@ jobs:
         image: ${{ env.IMAGE_NAME }}
         env_vars: |
           GCP_PROJECT_ID=${{ secrets.GCP_PROJECT_ID }}
-        flags: --allow-unauthenticated
+        flags: --allow-unauthenticated --timeout=3600
         
     - name: Verificar despliegue
       id: verify-deployment
