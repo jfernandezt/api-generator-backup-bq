@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main ]
 
+# Añadir esta sección de permisos
+permissions:
+  contents: read
+  id-token: write  # Esto es crucial para Workload Identity Federation
+
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   SERVICE_NAME: mi-servicio-python
